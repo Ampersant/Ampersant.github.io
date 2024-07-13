@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             scrollTrigger: {
                 trigger: "#experience-header",
                 start: "top 80%", 
-                markers: true 
+                // markers: true 
             },
             width: "70%",
             autoAlpha: 1,
@@ -148,14 +148,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrollTrigger: {
             trigger: "#experience-hr",
             start: "top 80%",
-            markers: true 
+            // markers: true 
         },
         duration: 1}); //{y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 3}
     gsap.timeline({
         scrollTrigger: {
         trigger: "#Feedback",
         start: "20% 80%",
-        markers: true 
+        // markers: true 
     }}).fromTo('#text-feedback', {x:-100, autoAlpha: 0}, {x: 0, autoAlpha: 1, duration: 1.5}).to(".dash-f", {"--before-width": "6vw", delay: 1, duration:1.5});
     gsap.to(".dash-sm", {"--before-width": "2vw", delay: 2.5, duration:1.5,
         scrollTrigger: {
