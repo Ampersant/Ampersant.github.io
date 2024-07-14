@@ -46,6 +46,9 @@
         min-width: 350px;
 
     }
+        /* * { 
+        outline: 4px solid green;
+    } */
 }
 @media (min-width: 795px) and (max-width: 1345px){
     header *{
@@ -73,7 +76,7 @@
         position: absolute;
         flex-direction: column;
         align-items: center;
-        top: 0;
+        top: 5%;
         right:2vw;
         /* margin-left: 10vw; */
         /* right: 15vw; */
