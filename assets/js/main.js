@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         { autoAlpha: 1, y: 0, delay:3, duration: 2, ease: 'power2', onStart: () => {greetingStart()}} // onStart: () => {greetingStart();}
       ).to("#ym-p", {
         text: {
-            value: "PHP Web Developer & Technology Enthusiast",
+            value: "PHP Web Developer & Frontend Enhancer",
             newClass: "",
             // delimiter: " ",
         },
