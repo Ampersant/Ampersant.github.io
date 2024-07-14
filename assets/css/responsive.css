@@ -76,7 +76,7 @@
         position: absolute;
         flex-direction: column;
         align-items: center;
-        top: 5%;
+        top: calc(7vh + 2vw);
         right:2vw;
         /* margin-left: 10vw; */
         /* right: 15vw; */
@@ -101,8 +101,8 @@
         font-size: 40px;
     }
     .card{
-        width: 30vw;
-        min-width: 350px;
+        width: calc(30vh + 100px) ;
+        /* min-width: 350px; */
         height: 30vh;
     }
 }
