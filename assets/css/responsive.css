@@ -3,6 +3,9 @@
     header *{
         max-height: 100vh;
     }
+    html{
+        scroll-padding: 100vh;
+    }
     header .logo svg{
         max-height: 150px;
     }
@@ -53,6 +56,9 @@
 @media (min-width: 795px) and (max-width: 1345px){
     header *{
         max-height: 100vh;
+    }
+    html{
+        scroll-padding: 100vh;
     }
     header .logo svg{
         max-height: 150px;
@@ -228,6 +234,9 @@
     }
     header *{
         max-height: 100vh;
+    }
+    html{
+        scroll-padding: 20vh;
     }
     header .logo svg{
         max-height: 150px;
