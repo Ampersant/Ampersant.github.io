@@ -1,9 +1,11 @@
+
 document.addEventListener("DOMContentLoaded", (event) => {
+
     function greetingStart(){
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflowX = 'hidden';
     }
     function greetingEnd(){
-        document.body.style.overflow = 'visible';
+        document.body.style.overflowX = 'visible';
     }
     gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin)
     let ym = document.getElementById('ym');
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     t1.fromTo(
         "#ym",
         { autoAlpha: 0, y: -150},
-        { autoAlpha: 1, y: 0, delay:3, duration: 2, ease: 'power2', onStart: () => {greetingStart()}} // onStart: () => {greetingStart();}
+        { autoAlpha: 1, y: 0, delay:1.5, duration: 2, ease: 'power2', onStart: () => {greetingStart();}} // 
       ).to("#ym-p", {
         text: {
             value: "PHP Web Developer & Frontend Enhancer",
@@ -25,17 +27,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.fromTo(
         "#ym-image",
         { autoAlpha: 0, x: 150},
-        { autoAlpha: 1, x: 0, duration: 2.5, delay: 3.5, ease: 'expo'}
+        { autoAlpha: 1, x: 0, duration: 2.5, delay: 2, ease: 'expo'}
       );
     gsap.fromTo(
         ".vr-ln-gld",
         {height: 0},
-        {duration: 1.5, delay: 6, height: 100,}
+        {duration: 1.5, delay: 4.5, height: 100,}
     );
     gsap.fromTo(
         "#icon",
         {autoAlpha: 0, y: -25},
-        {autoAlpha: 1, duration: 0.7, delay: 7, y: 0, onComplete: () => {greetingEnd();}}
+        {autoAlpha: 1, duration: 0.7, delay: 5.5, y: 0, onComplete: () => {greetingEnd();}} //, 
     );
     gsap.fromTo(
         "#about-h",
@@ -170,7 +172,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
         delay: 2.5,
         text: {
-            value: 'CEO of Me & Myself'
+            value: 'Python Backend Developer'
         },
         duration: 1
     })

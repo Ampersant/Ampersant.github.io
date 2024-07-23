@@ -793,4 +793,12 @@ a.nav-link:hover{
            left: 0;
        }
    }
+   .tt-a{ 
+    text-decoration: none;
+    color: #f3af3d;
+    transition: 1s ease;
+   }
+   .tt-a{
+    color: #ffffff;
+}
 
