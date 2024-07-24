@@ -1,6 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", (event) => {
-
     function greetingStart(){
         document.body.style.overflowX = 'hidden';
     }
