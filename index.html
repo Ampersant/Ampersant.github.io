@@ -339,10 +339,11 @@
         </div>
     </footer>
     <script>
-        window.onload = function () {
-            window.scrollTo(0, 0);
-        };
-      </script>
+        history.scrollRestoration = "manual";
+        $(window).on('beforeunload', function(){
+            $(window).scrollTop(0);
+        });
+    </script>
     <!-- scripts -->
     <script src="assets/js/preloader.js"></script>
 
