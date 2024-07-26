@@ -504,8 +504,8 @@ a.nav-link:hover{
 .card img{
     position: absolute;
     width: auto;
-    bottom: 0;
-    right: 10%;
+    bottom: -5%;
+    right: -5%;
     
 }
 .container-f{
@@ -800,5 +800,13 @@ a.nav-link:hover{
    }
    .tt-a{
     color: #ffffff;
+}
+.highlight {
+    background-color: yellow;
+    color: black;
+}
+
+.current-match {
+    outline: 2px solid red;
 }
 
