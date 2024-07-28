@@ -58,7 +58,7 @@
         max-height: 100vh;
     }
     html{
-        scroll-padding: 100vh;
+        scroll-padding: 20vh;
     }
     header .logo svg{
         max-height: 150px;
