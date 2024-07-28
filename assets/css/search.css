@@ -54,6 +54,11 @@
   box-shadow: 0 0 15px 0 #F0BF6C;
   /* background-color: #F0BF6C; */
 }
+.search::before:hover,
+.search::after:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px 0 #F0BF6C;
+}
 /* .search:hover::before{
   background-color: #000000;
 }

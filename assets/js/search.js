@@ -1,29 +1,33 @@
-$('#search').quicksearch('table tbody tr', {
-    'delay': 100,
-    'bind': 'keyup keydown',
-    'show': function() {
-        if ($('#search').val() === '') {
-            return;
-        }
-        $(this).addClass('show');
-    },
-    'onAfter': function() {
-        if ($('#search').val() === '') {
-            return;
-        }
-        if ($('.show:first').length > 0){
-            $('html,body').scrollTop($('.show:first').offset().top);
-        }
-    },
-    'hide': function() {
-        $(this).removeClass('show');
-    },
-    'prepareQuery': function(val) {
-        return new RegExp(val, "i");
-    },
-    'testQuery': function(query, txt, _row) {
-        return query.test(txt);
-    }
-});
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
 
-$('#search').focus();
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("search-input");
+    const markInstance = new Mark(document.body);
+
+    const performSearch = debounce(() => {
+        const searchTerm = searchInput.value;
+        markInstance.unmark({
+            done: function() {
+                if (searchTerm) {
+                    markInstance.mark(searchTerm, {
+                        done: function() {
+                            // Scroll to the first highlighted result
+                            const firstHighlight = document.querySelector('mark[data-markjs="true"]');
+                            if (firstHighlight) {
+                                firstHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    }, 300); // Adjust debounce wait time as needed
+
+    searchInput.addEventListener("input", performSearch);
+});
