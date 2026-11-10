@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-h2">
-        <h2 id="contact">Contact Me</h2>
+        <h2 id="contact" data-i18n="contact.title">Contact Me</h2>
     </div>
     <div class="contacts">
         <div class="contacts-item">

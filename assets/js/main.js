@@ -1,10 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", (event) => {
     function greetingStart(){
-        document.body.style.overflowX = 'hidden';
     }
     function greetingEnd(){
-        document.body.style.overflowX = 'visible';
     }
     gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin)
     let ym = document.getElementById('ym');
@@ -15,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         { autoAlpha: 1, y: 0, delay:1.5, duration: 2, ease: 'power2', onStart: () => {greetingStart();}} // 
       ).to("#ym-p", {
         text: {
-            value: "PHP Web Developer & Frontend Enhancer",
+            value: window.siteI18n.t("hero.role"),
             newClass: "",
             // delimiter: " ",
         },
@@ -171,7 +169,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
         delay: 2.5,
         text: {
-            value: 'Python Backend Developer'
+            value: window.siteI18n.t("feedback.role")
         },
         duration: 1
     })
@@ -180,5 +178,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
             trigger: "#Feedback",
             start: "20% 80%",
         }, duration: 1.5
-    })    
+    })
+    window.siteI18n.onChange(function () {
+        gsap.killTweensOf("#ym-p");
+        var role = document.getElementById("ym-p");
+        if (role) role.textContent = window.siteI18n.t("hero.role");
+        var position = document.querySelector(".person-position");
+        if (position && position.textContent.trim()) {
+            position.textContent = window.siteI18n.t("feedback.role");
+        }
+    });
    });

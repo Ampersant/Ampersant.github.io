@@ -16,9 +16,9 @@
     <main>
         <div id="greeting" class="container-1">
             <div id="ym" class="text">
-                <h1>I'M <span>Yaroslav Mankivskyi</span></h1>
+                <h1 data-i18n-html="hero.title">I'M <span>Yaroslav Mankivskyi</span></h1>
                 <p id="ym-p" class="box typing"></p>
-                <a href="mailto:y.mankivskyi@gmail.com" class="contact-btn">Contact Me</a>
+                <a href="mailto:y.mankivskyi@gmail.com" class="contact-btn" data-i18n="hero.contact">Contact Me</a>
             </div> 
             <div id="ym-image" class="image">
                 <img src="assets/img/me1.png" alt="Yaroslav Mankivskyi">
@@ -36,13 +36,13 @@
             
             <div class="text">
             <!-- <span class="hr-ln-gld"></span> -->
-            <h2 id="about-h" class="dash-f">About</h2>
-                <p id="about-p">Hi! My name is Yaroslav, <span>I’m a web developer specializing in PHP and Laravel, with a strong foundation in JavaScript and MySQL.</span> I’m ready to take responsibility before the team and the client and easily find an approach to different people. I excel at quickly learning new technologies and finding solutions to different problems. I have critical thinking skills and love challenges because they provide an opportunity to grow!</p>
+            <h2 id="about-h" class="dash-f" data-i18n="about.title">About</h2>
+                <p id="about-p" data-i18n-html="about.body">Hi! My name is Yaroslav, <span>I’m a full-stack web developer with DevOps experience.</span> Alongside my job I’m looking for clients, and I’ll be glad to take on any web task — a site, an application, an integration, or getting a project into production. I’m ready to take responsibility before the team and the client, and I find an approach to different people easily. I learn new technologies quickly and like challenges, because they are a chance to grow.</p>
             </div>
         </div>
         <div class="container-2">
             <div class="container-header">
-                <h2 id="my-skills">My Skills</h2>
+                <h2 id="my-skills" data-i18n="skills.title">My Skills</h2>
             </div>
             <div class="skills-flex">
                 <div class="skills-card">
@@ -194,7 +194,7 @@
         </div>
             <div class="container-2">
                 <div class="container-header">
-                    <h2 id="portfolio">Portfolio</h2>
+                    <h2 id="portfolio" data-i18n="portfolio.title">Portfolio</h2>
                 </div>
             </div>
                 <div class="porfolio-flex">
@@ -251,7 +251,7 @@
                 </div>
                 <div class="container-2">
                     <div  id="experience-header" class="container-header">
-                        <h2>Experience</h2>
+                        <h2 data-i18n="experience.title">Experience</h2>
                         <hr id="experience-hr">
                     </div>
                 </div>
@@ -259,10 +259,10 @@
                     <div class="con">
                         <div class="year">2024</div>
                         <div class="content">
-                            <h2>Web Developer</h2>
+                            <h2 data-i18n="exp.nova.role">Web Developer</h2>
                             <h3>Nova GmbH</h3>
-                            <p>During this period of time I’ve done next things:</p>
-                            <ul>
+                            <p data-i18n="exp.nova.intro">During this period of time I’ve done next things:</p>
+                            <ul data-i18n-html="exp.nova.list">
                                 <li>Worked on websites built with Drupal, WordPress, and Magento.</li>
                                 <li>Created RAG applications and chatbots.</li>
                                 <li>Made 3D games and graphics with JavaScript and React.</li>
@@ -274,10 +274,10 @@
                     <div class="con">
                         <div class="year">2021</div>
                         <div class="content">
-                            <h2>PHP Web-developer</h2>
+                            <h2 data-i18n="exp.free.role">PHP Web-developer</h2>
                             <h3>Freelance, mentor</h3>
-                            <p>During this period of time I’ve done next things:</p>
-                            <ul>
+                            <p data-i18n="exp.free.intro">During this period of time I’ve done next things:</p>
+                            <ul data-i18n-html="exp.free.list">
                                 <li>Worked with several web applications and their parts(including DBs, APIs etc.), such as landing pages and multi-page applications on different topics and with different needs. Implemented different patterns such as REST and MVC.</li>
                                 <li>Did strong user authentication using OAuth2, Sessions and Tokens.</li>
                                 <li>Made web-based administrative panels, as well as remote administration service using Telegram Bot API.</li>
@@ -299,8 +299,8 @@
                     <div class="container-f">
                         <div id="text-feedback" class="text">
                             <span class="hr-ln-gld"></span>
-                            <h2>Testimonial</h2>
-                            <p class="dash-f">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span>Etiam eu turpis molestie, dictum est a, mattis tellus.</span> Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. <span>Maecenas eget</span> condimentum velit, sit amet feugiat lectus.</p>
+                            <h2 data-i18n="feedback.title">Testimonial</h2>
+                            <p class="dash-f" data-i18n-html="feedback.body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span>Etiam eu turpis molestie, dictum est a, mattis tellus.</span> Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. <span>Maecenas eget</span> condimentum velit, sit amet feugiat lectus.</p>
                             <h3>Name Surname</h3>
                             <p class="person-position dash-sm "><span class="typing"></span></p>
                         </div>
@@ -320,6 +320,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/lang.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/preloader.js"></script>

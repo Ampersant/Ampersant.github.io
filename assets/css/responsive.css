@@ -99,12 +99,9 @@
 }
 /* MOBILES */
 @media screen and (max-width: 630px) {
-    /* * { 
-        outline: 2px solid green;
-    } */
-    body{
-        overflow-x: hidden;
-        
+    html, body {
+        overflow-x: clip;
+        max-width: 100%;
     }
     .button_container{
         visibility: visible;
@@ -137,6 +134,17 @@
     }
     .text {
         margin-left: 5vw;
+    }
+    #ym.text {
+        margin-right: 5vw;
+        max-width: calc(100% - 10vw);
+        box-sizing: border-box;
+    }
+    #ym h1 {
+        font-size: min(20px, calc((100vw - 10vw) / 20));
+    }
+    #ym h1 span {
+        font-size: 1.15em;
     }
     .text p {
         font-size: 16px;
