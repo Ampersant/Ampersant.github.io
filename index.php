@@ -36,7 +36,7 @@
             
             <div class="text">
             <!-- <span class="hr-ln-gld"></span> -->
-            <h2 id="about-h" class="dash">About</h2>
+            <h2 id="about-h" class="dash-f">About</h2>
                 <p id="about-p">Hi! My name is Yaroslav, <span>I’m a web developer specializing in PHP and Laravel, with a strong foundation in JavaScript and MySQL.</span> I’m ready to take responsibility before the team and the client and easily find an approach to different people. I excel at quickly learning new technologies and finding solutions to different problems. I have critical thinking skills and love challenges because they provide an opportunity to grow!</p>
             </div>
         </div>
@@ -44,115 +44,157 @@
             <div class="container-header">
                 <h2 id="my-skills">My Skills</h2>
             </div>
-        </div>
-        <div class="skills-flex">
+            <div class="skills-flex">
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/phplogo.png" alt="">
+                        <img src="assets/img/logos/phplogo.png" alt="">
                     </div>
                     <p>PHP</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/pythonlogo.png" alt="">
+                        <img src="assets/img/logos/pythonlogo.png" alt="">
                     </div>
                     <p>Python</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/laravellogo.png" alt="">
+                        <img src="assets/img/logos/laravellogo.png" alt="">
                     </div>
                     <p>Laravel</p>
                 </div>
         
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/flasklogo.png" alt="">
+                        <img src="assets/img/logos/flasklogo.png" alt="">
                     </div>
                     <p>Flask</p>
                 </div>
-            </div>   
-            <div class="skills-flex">
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/mysqllogo.webp" alt="">
+                        <img src="assets/img/logos/mysqllogo.webp" alt="">
                     </div>
                     <p>MySQL</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/htmllogo.png" alt="">
+                        <img src="assets/img/logos/htmllogo.png" alt="">
                     </div>
                     <p>HTML</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/csslogo.png" alt="">
+                        <img src="assets/img/logos/csslogo.png" alt="">
                     </div>
                     <p>CSS</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/javascriptlogo.png" alt="">
+                        <img src="assets/img/logos/javascriptlogo.png" alt="">
                     </div>
                     <p>JavaScript</p>
                 </div>
-            </div>
-            <div class="skills-flex">
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/bootstraplogo.png" alt="">
+                        <img src="assets/img/logos/bootstraplogo.png" alt="">
                     </div>
                     <p>Bootstrap</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/gsaplogo.png" alt="">
+                        <img src="assets/img/logos/gsaplogo.png" alt="">
                     </div>
                     <p>GSAP</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/jquerylogo.svg" alt="">
+                        <img src="assets/img/logos/jquerylogo.svg" alt="">
                     </div>
                     <p>JQuery</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/chartjslogo.png" alt="">
+                        <img src="assets/img/logos/chartjslogo.png" alt="">
                     </div>
                     <p>ChartJS</p>
                 </div>
-            </div>
-            <div class="skills-flex">    
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/githublogo.png" alt="">
+                        <img src="assets/img/logos/githublogo.png" alt="">
                     </div>
                     <p>Github</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/dockerlogo.png" alt="">
+                        <img src="assets/img/logos/dockerlogo.png" alt="">
                     </div>
                     <p>Docker</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/postmanlogo.png" alt="">
+                        <img src="assets/img/logos/postmanlogo.png" alt="">
                     </div>
                     <p>Postman</p>
                 </div>
                 <div class="skills-card">
                     <div class="card-image">
-                        <img src="/assets/img/logos/termiuslogo.svg" alt="">
+                        <img src="assets/img/logos/termiuslogo.svg" alt="">
                     </div>
                     <p>Termius</p>
                 </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/drupallogo.svg" alt="">
+                    </div>
+                    <p>Drupal</p>
+                </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/wordpresslogo.svg" alt="">
+                    </div>
+                    <p>WordPress</p>
+                </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/magentologo.svg" alt="">
+                    </div>
+                    <p>Magento</p>
+                </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/reactlogo.svg" alt="">
+                    </div>
+                    <p>React</p>
+                </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/threejslogo.svg" alt="">
+                    </div>
+                    <p>Three.js</p>
+                </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/ragflowlogo.svg" alt="">
+                    </div>
+                    <p>RAGFlow</p>
+                </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/redislogo.svg" alt="">
+                    </div>
+                    <p>Redis</p>
+                </div>
+                <div class="skills-card">
+                    <div class="card-image">
+                        <img src="assets/img/logos/typo3logo.svg" alt="">
+                    </div>
+                    <p>TYPO3</p>
+                </div>
             </div>
-            <div id="portfolio" class="container-2">
+        </div>
+            <div class="container-2">
                 <div class="container-header">
-                    <h2>Portfolio</h2>
+                    <h2 id="portfolio">Portfolio</h2>
                 </div>
             </div>
                 <div class="porfolio-flex">
@@ -215,18 +257,32 @@
                 </div>
                 <div class="timeline">
                     <div class="con">
+                        <div class="year">2024</div>
+                        <div class="content">
+                            <h2>Web Developer</h2>
+                            <h3>Nova GmbH</h3>
+                            <p>During this period of time I’ve done next things:</p>
+                            <ul>
+                                <li>Worked on websites built with Drupal, WordPress, and Magento.</li>
+                                <li>Created RAG applications and chatbots.</li>
+                                <li>Made 3D games and graphics with JavaScript and React.</li>
+                                <li>Worked on legacy projects and rebuilt application cores.</li>
+                                <li>Developed products on Laravel.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="con">
                         <div class="year">2021</div>
                         <div class="content">
                             <h2>PHP Web-developer</h2>
                             <h3>Freelance, mentor</h3>
-                            <p>During this period of time I’ve done next things:
-                                <!-- <ul> -->
-                                    <li>Worked with several web applications and their parts(including DBs, APIs etc.), such as landing pages and multi-page applications on different topics and with different needs. Implemented different patterns such as REST and MVC.</li>
-                                    <li>Did strong user authentication using OAuth2, Sessions and Tokens.</li>
-                                    <li>Made web-based administrative panels, as well as remote administration service using Telegram Bot API.</li>
-                                    <li>Deployed projects to web servers using remote access software(e.g., Termius) and set up server admin panels for easy configuration of the application</li>
-                                <!-- </ul> -->
-                            </p>
+                            <p>During this period of time I’ve done next things:</p>
+                            <ul>
+                                <li>Worked with several web applications and their parts(including DBs, APIs etc.), such as landing pages and multi-page applications on different topics and with different needs. Implemented different patterns such as REST and MVC.</li>
+                                <li>Did strong user authentication using OAuth2, Sessions and Tokens.</li>
+                                <li>Made web-based administrative panels, as well as remote administration service using Telegram Bot API.</li>
+                                <li>Deployed projects to web servers using remote access software(e.g., Termius) and set up server admin panels for easy configuration of the application</li>
+                            </ul>
                            
                         </div>
                     </div>

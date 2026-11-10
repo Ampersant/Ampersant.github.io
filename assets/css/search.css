@@ -16,7 +16,10 @@
   height: 60px;
   background: #3b3b3b;
   border-radius: 50%;
-  transition: all 0.5s;
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
   z-index: 4;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
 }
@@ -33,7 +36,15 @@
   height: 2px;
   background: #e9e9e9;
   transform: rotate(45deg);
-  transition: all 0.5s;
+  transition:
+    top 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    left 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.3s ease,
+    border 0.25s ease,
+    border-radius 0.35s ease;
 }
 .search::after {
   content: "";
@@ -47,7 +58,15 @@
   height: 25px;
   border-radius: 50%;
   border: 2px solid #e9e9e9;
-  transition: all 0.5s;
+  transition:
+    top 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    left 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.3s ease,
+    border 0.25s ease,
+    border-radius 0.35s ease;
 }
 .search:hover {
   cursor: pointer;
@@ -83,7 +102,9 @@ input {
   padding: 0 80px 0 20px;
   border-radius: 30px;
   box-shadow: 0 0 25px 0 #F0BF6C, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-  transition: ease-in 0.6s;
+  transition:
+    width 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.28s ease 0.1s;
   opacity: 0;
   z-index: 5;
   font-weight: bolder;
@@ -96,16 +117,24 @@ input:focus {
   width: 150px;
   opacity: 1;
   cursor: text;
+  transition:
+    width 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.22s ease;
 }
 input:focus ~ .search {
-  right: -250px;
+  transform: translateX(125px);
   background: #151515;
   z-index: 6;
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease 0.16s,
+    box-shadow 0.35s ease;
 }
 input:focus ~ .search::before {
   top: 0;
   left: 0;
   width: 25px;
+  transition-delay: 0.2s;
 }
 input:focus ~ .search::after {
   top: 0;
@@ -116,6 +145,7 @@ input:focus ~ .search::after {
   background: #e9e9e9;
   border-radius: 0%;
   transform: rotate(-45deg);
+  transition-delay: 0.2s;
 }
 input::placeholder {
   color: #e9e9e9;

@@ -13,8 +13,10 @@ html, body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    scroll-padding: 100px;
-
+}
+html{
+    --menu-scroll-offset: 120px;
+    scroll-padding-top: var(--menu-scroll-offset);
 }
 body {
     background-color: #2b2b2b;
@@ -119,6 +121,7 @@ a.nav-link:hover{
  .container-1 {
     display: flex;
     align-items: center;
+    position: relative;
     background-color: #333;
     background-repeat: no-repeat;
     max-height: 100%;
@@ -138,16 +141,54 @@ a.nav-link:hover{
     /* border-radius: 10px; */
     /* box-shadow: 0 0 20px 0#1c1c1c; */
 }
+.container-2:has(> .skills-flex) {
+    flex-direction: column;
+    align-items: center;
+    max-height: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+#about.container-2 {
+    --about-indent: 15vw;
+    box-sizing: border-box;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 40px 0;
+    justify-content: flex-start;
+}
+#about .text {
+    margin-left: var(--about-indent);
+    margin-right: 12vw;
+    width: auto;
+    padding: 0;
+}
 .text {
     margin-left: 15vw;
 }
+#ym {
+    container-type: inline-size;
+    flex: 1 1 auto;
+    min-width: 0;
+    box-sizing: border-box;
+}
 .text h1 {
-    font-size: 36px;
     margin: 0;
+}
+#ym h1 {
+    /* 15.9em is the measured width of "I'M" + the 1.5em name, so the line fits the column */
+    font-size: min(36px, calc(100cqi / 15.9));
+    line-height: 1.2;
+    text-align: left;
+    white-space: nowrap;
 }
 .text h1 span {
     color: #f3af3d;
-    font-size: 54px;
+}
+#ym h1 span {
+    font-size: 1.5em;
 }
 .text p {
     font-size: 20px;
@@ -167,17 +208,60 @@ a.nav-link:hover{
     background-color: #f3af3d;
     color: #333;
 }
+.image {
+    overflow: hidden;
+    margin: 0;
+}
+@media (min-width: 631px) {
+    .container-1 {
+        align-items: stretch;
+        overflow: hidden;
+        min-height: calc(100vh - 102px);
+        padding: 0 min(48vw, 640px) 0 20px;
+    }
+    .container-1 .text {
+        align-self: center;
+        padding: 40px 32px 40px 0;
+    }
+    #ym-image.image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: min(48vw, 640px);
+        height: auto;
+        max-height: none;
+        margin: 0;
+    }
+    #ym-image.image img {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        object-fit: contain;
+        object-position: right bottom;
+    }
+}
 .image img {
-    border-radius: 10px;
-    position: relative;
-    /* left: 10vw; */
-    height: 100vh;
-    bottom: -2.1vh;
+    border-radius: 0;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    object-fit: contain;
+    object-position: right bottom;
     filter: brightness(0.5) saturate(0%);
     opacity: 0.5;
     z-index: 1;
-    overflow: hidden;
-    float: right;
+    display: block;
 }
 
 .social-icons {
@@ -297,30 +381,30 @@ a.nav-link:hover{
     font-size: 28px;
 }
 .skills-flex{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 290px);
     justify-content: center;
+    gap: 28px 40px;
+    width: 1280px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto 24px;
     text-align: center;
-    /* grid-template-columns: 25% 25% 25% 25%; */
-    /* background-color: #333; */
 }
 .skills-card{
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 100%;
     height: 300px;
     border-radius:  25px;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 0;
     background-color: #4d4d4d;
-    /* flex: 1 1 calc(20% - 20px); */
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .skills-card:hover {
-    transform: scale(1.03);
     background-color: #f3af3d;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 .card-image{
     width: 150px;
@@ -333,8 +417,13 @@ a.nav-link:hover{
 .card-image img{
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the square without distortion */
-
+    object-fit: contain;
+    padding: 12px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+.skills-card:hover .card-image img{
+    transform: scale(1.06);
 }
 .porfolio-flex{
     display: flex;
@@ -476,6 +565,16 @@ a.nav-link:hover{
 .content p {
     margin: 10px 0;
     font-size: 1em;
+}
+
+.content ul {
+    margin: 8px 0 0;
+    padding: 0 0 0 1.25em;
+}
+
+.content li {
+    margin: 0.35em 0;
+    padding-left: 0.35em;
 }
 /* FEEDBACK */
 .person-position{

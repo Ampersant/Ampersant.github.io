@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
     gsap.fromTo(
         "#ym-image",
-        { autoAlpha: 0, x: 150},
-        { autoAlpha: 1, x: 0, duration: 2.5, delay: 2, ease: 'expo'}
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 2.5, delay: 2, ease: 'expo' }
       );
     gsap.fromTo(
         ".vr-ln-gld",
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         }
     )
-    gsap.to(".dash", {
+    gsap.to("#about-h", {
         scrollTrigger: {
             // markers: true,
             trigger: "#about",
@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         });
         t2.fromTo(skill, 
-            {scale: 0.5, opacity: 0},
-            {scale: 1, opacity: 1, duration: 1.5, ease: 'expo.out'}
+            {y: 36, autoAlpha: 0},
+            {y: 0, autoAlpha: 1, duration: 1.2, ease: 'expo.out'}
         );
     });
     let elemnets = document.querySelectorAll(".p-item-content");
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#Feedback",
         start: "20% 80%",
         // markers: true 
-    }}).fromTo('#text-feedback', {x:-100, autoAlpha: 0}, {x: 0, autoAlpha: 1, duration: 1.5}).to(".dash-f", {"--before-width": "6vw", delay: 1, duration:1.5});
+    }}).fromTo('#text-feedback', {x:-100, autoAlpha: 0}, {x: 0, autoAlpha: 1, duration: 1.5}).to("#Feedback .dash-f", {"--before-width": "6vw", delay: 1, duration:1.5});
     gsap.to(".dash-sm", {"--before-width": "2vw", delay: 2.5, duration:1.5,
         scrollTrigger: {
             trigger: "#Feedback",

@@ -1,61 +1,135 @@
 .preloader-1 {
-    margin: 100px auto 0;
-    width: 66px;
-    height: 12px;
-  }
-  .preloader-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #292929;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1000;
-    opacity: 1;
-    z-index: 10011;
-    transition: opacity 1s ease;
-  }
-  .preloader-1.hidden {
-    opacity: 0;
-  }
-  #preloader {
-    color: #fff;
-    margin: 5px 0;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    letter-spacing: 2px;
-  }  
-  .preloader-1 .line {
-    width: 1px;
-    height: 20px;
-    background: #fff;
-    margin: 0 2px;
-    display: inline-block;
-    animation: opacity-1 1000ms infinite ease-in-out;
-  }
-  .preloader-1 .line-1, .preloader-2 .line-1 { animation-delay: 800ms; }
-.preloader-1 .line-2, .preloader-2 .line-2 { animation-delay: 600ms; }
-.preloader-1 .line-3, .preloader-2 .line-3 { animation-delay: 400ms; }
-.preloader-1 .line-4, .preloader-2 .line-4 { animation-delay: 200ms; }
-.preloader-1 .line-6, .preloader-2 .line-6 { animation-delay: 200ms; }
-.preloader-1 .line-7, .preloader-2 .line-7 { animation-delay: 400ms; }
-.preloader-1 .line-8, .preloader-2 .line-8 { animation-delay: 600ms; }
-.preloader-1 .line-9, .preloader-2 .line-9 { animation-delay: 800ms; }
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10011;
+  opacity: 1;
+  transition: opacity 0.65s ease;
+}
 
-@keyframes opacity-1 { 
-  0% { 
-    opacity: 1;
-  }
-  50% { 
+.preloader-1.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader-logo {
+  width: min(54vw, 260px);
+  height: auto;
+  overflow: visible;
+  opacity: 0;
+}
+
+.preloader-1.is-drawing .preloader-logo {
+  opacity: 1;
+  transition: none;
+}
+
+.logo-path {
+  fill: #f8f8f8;
+}
+
+.preloader-1.is-drawing .logo-path {
+  fill: rgba(248, 248, 248, 0);
+  stroke: #f8f8f8;
+  stroke-width: 2.75px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+  transition: none;
+}
+
+.preloader-1.is-drawing.draw .logo-path {
+  stroke-dashoffset: 0;
+  fill: #f8f8f8;
+  stroke-width: 0;
+  transition:
+    stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1),
+    fill 0.45s ease 1.05s,
+    stroke-width 0.4s ease 1.15s;
+}
+
+.logo-letter-m,
+.logo-letter-y {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.preloader-1.is-drawing .logo-letter-m,
+.preloader-1.is-drawing .logo-letter-y {
+  opacity: 0;
+  transition: none;
+}
+
+.preloader-1.is-drawing .logo-letter-m {
+  transform: translateY(48%);
+}
+
+.preloader-1.is-drawing .logo-letter-y {
+  transform: translateY(-48%);
+}
+
+.preloader-1.is-drawing.draw .logo-letter-m,
+.preloader-1.is-drawing.draw .logo-letter-y {
+  transform: translateY(0);
+  animation: fadeIn 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
-  100% { 
+  to {
     opacity: 1;
-  }  
+  }
+}
+
+.preloader-1.is-drawing.draw .preloader-logo {
+  animation: logo-glow 1.05s ease 1.55s forwards;
+}
+
+@keyframes logo-glow {
+  from {
+    filter: drop-shadow(0 0 0 rgba(248, 248, 248, 0));
+  }
+  to {
+    filter: drop-shadow(0 0 8px rgba(248, 248, 248, 0.75));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-logo,
+  .preloader-1.is-drawing .preloader-logo {
+    opacity: 1;
+    transition: none;
+    animation: none;
+    filter: none;
+  }
+
+  .logo-path,
+  .preloader-1.is-drawing .logo-path,
+  .preloader-1.is-drawing.draw .logo-path {
+    fill: #f8f8f8;
+    stroke: none;
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+
+  .logo-letter-m,
+  .logo-letter-y,
+  .preloader-1.is-drawing .logo-letter-m,
+  .preloader-1.is-drawing .logo-letter-y,
+  .preloader-1.is-drawing.draw .logo-letter-m,
+  .preloader-1.is-drawing.draw .logo-letter-y {
+    transform: none;
+    opacity: 1;
+    transition: none;
+    animation: none;
+  }
 }

@@ -1,6 +1,6 @@
 <footer>
-    <div id="contact" class="footer-h2">
-        <h2>Contact Me</h2>
+    <div class="footer-h2">
+        <h2 id="contact">Contact Me</h2>
     </div>
     <div class="contacts">
         <div class="contacts-item">
