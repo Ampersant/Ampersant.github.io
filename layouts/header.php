@@ -14,6 +14,7 @@
             <div id="search" class="search-container">
                 <div class="lang-switch" role="group" aria-label="Language">
                     <button type="button" class="lang-switch__btn is-active" data-set-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de" aria-pressed="false">DE</button>
                     <button type="button" class="lang-switch__btn" data-set-lang="ru" aria-pressed="false">RU</button>
                 </div>
                 <input type="text" placeholder="Search..." data-i18n-placeholder="search.placeholder">
@@ -36,6 +37,7 @@
             <li class="lang-li">
                 <div class="lang-switch" role="group" aria-label="Language">
                     <button type="button" class="lang-switch__btn is-active" data-set-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" class="lang-switch__btn" data-set-lang="de" aria-pressed="false">DE</button>
                     <button type="button" class="lang-switch__btn" data-set-lang="ru" aria-pressed="false">RU</button>
                 </div>
             </li>

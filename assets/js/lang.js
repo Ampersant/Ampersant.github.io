@@ -27,6 +27,33 @@
       "contact.title": "Contact Me",
       "search.placeholder": "Search..."
     },
+    de: {
+      "nav.skills": "Skills",
+      "nav.portfolio": "Portfolio",
+      "nav.contact": "Kontakt",
+      "hero.title": "ICH <span>Yaroslav Mankivskyi</span>",
+      "hero.role": "Full-Stack-Webentwickler & DevOps",
+      "hero.contact": "Kontakt",
+      "about.title": "Über mich",
+      "about.body": "Hallo! Ich heiße Yaroslav, <span>ich bin Full-Stack-Webentwickler mit DevOps-Erfahrung.</span> Neben meiner Stelle suche ich Kunden und übernehme gern jede Aufgabe im Web — eine Website, eine Anwendung, eine Integration oder die Veröffentlichung eines Projekts. Ich übernehme Verantwortung gegenüber Team und Kunde und finde leicht einen Zugang zu unterschiedlichen Menschen. Neue Technologien lerne ich schnell, und Herausforderungen mag ich, weil ich daran wachse.",
+      "skills.title": "Meine Skills",
+      "portfolio.title": "Portfolio",
+      "portfolio.itemTitle": "Projekttitel",
+      "portfolio.itemText": "Projektbeschreibung",
+      "portfolio.soon": "Folgt bald..",
+      "experience.title": "Erfahrung",
+      "exp.nova.role": "Webentwickler",
+      "exp.nova.intro": "In dieser Zeit habe ich Folgendes gemacht:",
+      "exp.nova.list": "<li>An Websites mit Drupal, WordPress und Magento gearbeitet.</li><li>RAG-Anwendungen und Chatbots entwickelt.</li><li>3D-Spiele und Grafik mit JavaScript und React umgesetzt.</li><li>An Legacy-Projekten gearbeitet und Anwendungskerne neu aufgebaut.</li><li>Produkte mit Laravel entwickelt.</li>",
+      "exp.free.role": "PHP-Webentwickler",
+      "exp.free.intro": "In dieser Zeit habe ich Folgendes gemacht:",
+      "exp.free.list": "<li>An Webanwendungen und ihren Teilen gearbeitet (Datenbanken, APIs usw.): Landingpages und mehrseitige Projekte für unterschiedliche Aufgaben. Dabei Muster wie REST und MVC eingesetzt.</li><li>Authentifizierung mit OAuth2, Sessions und Tokens umgesetzt.</li><li>Administrationsoberflächen gebaut sowie Fernadministration über die Telegram Bot API.</li><li>Projekte auf Server ausgerollt (unter anderem mit Termius) und Panels für eine bequeme Konfiguration eingerichtet.</li>",
+      "feedback.title": "Referenz",
+      "feedback.body": "Ich hatte das Vergnügen, mit <span>Yaroslav Mankivskyi</span> zu arbeiten, und kann mit Überzeugung sagen, dass er ein <span>Full-Stack-Webentwickler</span> mit einem starken Können und einer verlässlichen Arbeitsweise ist. Seine Erfahrung mit PHP, Laravel und MySQL, zusammen mit Python und JavaScript, macht ihn zu einem vielseitigen und wertvollen Mitglied jedes Teams.",
+      "feedback.role": "Python-Backend-Entwickler",
+      "contact.title": "Kontakt",
+      "search.placeholder": "Suchen..."
+    },
     ru: {
       "nav.skills": "Навыки",
       "nav.portfolio": "Портфолио",
@@ -57,7 +84,8 @@
   };
 
   var listeners = [];
-  var lang = localStorage.getItem("site-lang") === "ru" ? "ru" : "en";
+  var saved = localStorage.getItem("site-lang");
+  var lang = dict[saved] ? saved : "en";
 
   function t(key) {
     var pack = dict[lang] || dict.en;
@@ -65,7 +93,7 @@
   }
 
   function apply() {
-    document.documentElement.lang = lang === "ru" ? "ru" : "en";
+    document.documentElement.lang = lang;
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       el.textContent = t(el.getAttribute("data-i18n"));
     });
@@ -87,8 +115,7 @@
     var btn = event.target.closest("[data-set-lang]");
     if (!btn) return;
     var next = btn.getAttribute("data-set-lang");
-    if (next !== "en" && next !== "ru") return;
-    if (next === lang) return;
+    if (!dict[next] || next === lang) return;
     lang = next;
     localStorage.setItem("site-lang", lang);
     apply();
