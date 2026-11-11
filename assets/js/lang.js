@@ -53,33 +53,6 @@
       "feedback.role": "Python-Backend-Entwickler",
       "contact.title": "Kontakt",
       "search.placeholder": "Suchen..."
-    },
-    ru: {
-      "nav.skills": "Навыки",
-      "nav.portfolio": "Портфолио",
-      "nav.contact": "Контакты",
-      "hero.title": "Я <span>Yaroslav Mankivskyi</span>",
-      "hero.role": "Веб-разработчик, фулстек и DevOps",
-      "hero.contact": "Связаться",
-      "about.title": "Обо мне",
-      "about.body": "Привет! Меня зовут Ярослав, <span>я веб-разработчик полного цикла с опытом DevOps.</span> Параллельно с основной работой ищу клиентов и буду рад взяться за любую задачу в вебе — сайт, приложение, интеграцию или вывод проекта в продакшен. Готов отвечать за результат перед командой и заказчиком и легко нахожу подход к разным людям. Быстро осваиваю новые технологии и люблю сложные задачи: на них я расту.",
-      "skills.title": "Мои навыки",
-      "portfolio.title": "Портфолио",
-      "portfolio.itemTitle": "Заголовок проекта",
-      "portfolio.itemText": "Описание проекта",
-      "portfolio.soon": "Скоро будет..",
-      "experience.title": "Опыт",
-      "exp.nova.role": "Веб-разработчик",
-      "exp.nova.intro": "За это время я сделал следующее:",
-      "exp.nova.list": "<li>Работал над сайтами на Drupal, WordPress и Magento.</li><li>Делал RAG-приложения и чат-ботов.</li><li>Делал 3D-игры и графику на JavaScript и React.</li><li>Работал с легаси-проектами и перестраивал ядра приложений.</li><li>Разрабатывал продукты на Laravel.</li>",
-      "exp.free.role": "PHP веб-разработчик",
-      "exp.free.intro": "За это время я сделал следующее:",
-      "exp.free.list": "<li>Работал с веб-приложениями и их частями (базы, API и т.д.): лендинги и многостраничные проекты под разные задачи. Применял паттерны вроде REST и MVC.</li><li>Делал аутентификацию через OAuth2, сессии и токены.</li><li>Собирал административные панели и удалённое администрирование через Telegram Bot API.</li><li>Выкладывал проекты на серверы (в том числе через Termius) и настраивал панели для удобной конфигурации.</li>",
-      "feedback.title": "Отзыв",
-      "feedback.body": "Мне посчастливилось работать с <span>Ярославом Маньковским</span>, и я могу уверенно сказать, что это <span>веб-разработчик полного цикла</span> с сильным набором навыков и ответственным подходом к делу. Опыт Ярослава в PHP, Laravel и MySQL вместе со знанием Python и JavaScript делает его разносторонним и ценным человеком в команде.",
-      "feedback.role": "Python-разработчик бэкенда",
-      "contact.title": "Связаться",
-      "search.placeholder": "Поиск..."
     }
   };
 
@@ -102,6 +75,9 @@
     });
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       el.setAttribute("placeholder", t(el.getAttribute("data-i18n-placeholder")));
+    });
+    document.querySelectorAll(".lang-switch").forEach(function (group) {
+      group.setAttribute("data-lang", lang);
     });
     document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
       var on = btn.getAttribute("data-set-lang") === lang;
